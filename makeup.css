@@ -1,4 +1,4 @@
-h1{
+h1 {
   font-size: 30px;
   font-family: arial;
 }
@@ -30,7 +30,8 @@ p {
   font-size: 12px;
 }
 
-input[type=text], select {
+input[type=text],
+select {
   font-family: arial;
   width: 300px;
   height: 70px;
@@ -55,9 +56,13 @@ div {
   font-size: 12px;
 }
 
-a {color: black;}
+a {
+  color: black;
+}
 
-.companyLinks{color: white;}
+.companyLinks {
+  color: white;
+}
 
 div.contentDiv {
   background-color: black;
@@ -89,7 +94,7 @@ div.contentDiv {
   font-weight: bold;
 }
 
-.mini_text{
+.mini_text {
   font-size: 12px;
 }
 
@@ -144,25 +149,32 @@ p.hint {
 }
 
 .container {
-  display: flex; /* Aligns children in a row by default */
-  justify-content: space-between; /* Optional: Add space between the divs */
+  display: flex;
+  /* Aligns children in a row by default */
+  justify-content: space-between;
+  /* Optional: Add space between the divs */
   border: 1px solid #ccc;
 }
+
 .box {
-  width: 45%; /* Set the width of each div */
+  width: 45%;
+  /* Set the width of each div */
   padding: 20px;
-  
+
   text-align: center;
 }
 
 @media only screen and (max-width:620px) {
 
   /* For mobile phones: */
-  .menu, .main, .right {
+  .menu,
+  .main,
+  .right {
     width: 100%;
   }
 
-  input[type=text], select {
+  input[type=text],
+  select {
     width: 100%;
     font-size: 25px;
     padding: 5px 10px;

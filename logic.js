@@ -3,10 +3,10 @@ let tables;
 let sp500_JSON = [];
 
 fetch(url)
-  .then(function(response) {
+  .then(function (response) {
     return response.json();
   })
-  .then(function(response) {
+  .then(function (response) {
     html_code = response["parse"]["text"]["*"];
     parser = new DOMParser();
     html = parser.parseFromString(html_code, "text/html");
@@ -73,7 +73,7 @@ function createList(data) {
       let div = document.createElement('div');
 
       if (key == "Name") {
-        div.innerHTML = "Company:"+ "<a href =" + data[i].yahoo_finance_profile + " class='companyLinks' target='_blank'>" + data[i][key] + "</a>";
+        div.innerHTML = "Company:" + "<a href =" + data[i].yahoo_finance_profile + " class='companyLinks' target='_blank'>" + data[i][key] + "</a>";
       } else if (key == "sec_filings") {
         div.innerHTML = "<a href =" + data[i][key] + " class='companyLinks' target='_blank' rel='nofollow'>SEC Filings</a>";
       } else if (key == "exchange_profile") {
@@ -82,10 +82,10 @@ function createList(data) {
         div.innerHTML = "<a href =" + data[i][key] + " class='companyLinks' target='_blank' rel='nofollow'>Yahoo Finance Profile</a>";
       } else if (key == "dividends") {
         div.innerHTML = "<a href =" + data[i][key] + " class='companyLinks' target='_blank' rel='nofollow'>Dividend Information</a>";
-      } else if (key == "date_first_added"){
-        div.innerHTML = "Included on: "+data[i][key];
+      } else if (key == "date_first_added") {
+        div.innerHTML = "Included on: " + data[i][key];
       } else {
-        div.innerHTML = key+": "+data[i][key];
+        div.innerHTML = key + ": " + data[i][key];
       }
 
       contentDiv.appendChild(div);
