@@ -150,7 +150,6 @@ function searchBySymbol() {
 }
 **/
 
-
 //quick console
 function quick(input) {
   console.log(input);
